@@ -75,6 +75,31 @@ class TestTwelveDays(unittest.TestCase):
         ]
         for ordinal in ordinals:
             self.assertIn(f"On the {ordinal} day", song)
+    
+    def test_get_day_ordinal_invalid_day_zero(self):
+        """Test that get_day_ordinal raises ValueError for day 0"""
+        with self.assertRaises(ValueError):
+            get_day_ordinal(0)
+    
+    def test_get_day_ordinal_invalid_day_negative(self):
+        """Test that get_day_ordinal raises ValueError for negative day"""
+        with self.assertRaises(ValueError):
+            get_day_ordinal(-1)
+    
+    def test_get_day_ordinal_invalid_day_too_large(self):
+        """Test that get_day_ordinal raises ValueError for day > 12"""
+        with self.assertRaises(ValueError):
+            get_day_ordinal(13)
+    
+    def test_generate_verse_invalid_day_zero(self):
+        """Test that generate_verse raises ValueError for day 0"""
+        with self.assertRaises(ValueError):
+            generate_verse(0)
+    
+    def test_generate_verse_invalid_day_too_large(self):
+        """Test that generate_verse raises ValueError for day > 12"""
+        with self.assertRaises(ValueError):
+            generate_verse(13)
 
 
 if __name__ == "__main__":

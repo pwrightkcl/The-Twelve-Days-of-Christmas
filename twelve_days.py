@@ -24,6 +24,9 @@ def get_gifts():
 
 def get_day_ordinal(day):
     """Return the ordinal string for a given day number (1-12)"""
+    if not 1 <= day <= 12:
+        raise ValueError(f"Day must be between 1 and 12, got {day}")
+    
     ordinals = [
         "first", "second", "third", "fourth", "fifth", "sixth",
         "seventh", "eighth", "ninth", "tenth", "eleventh", "twelfth"
@@ -33,6 +36,9 @@ def get_day_ordinal(day):
 
 def generate_verse(day):
     """Generate a verse for the given day (1-12)"""
+    if not 1 <= day <= 12:
+        raise ValueError(f"Day must be between 1 and 12, got {day}")
+    
     gifts = get_gifts()
     ordinal = get_day_ordinal(day)
     
