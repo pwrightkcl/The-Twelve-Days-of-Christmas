@@ -16,24 +16,23 @@ def main():
     
     # Gifts for each day
     gifts = [
-        "a Partridge in a Pear Tree",
-        "Two Turtle Doves",
-        "Three French Hens",
-        "Four Calling Birds",
-        "Five Gold Rings",
-        "Six Geese-a-Laying",
-        "Seven Swans-a-Swimming",
-        "Eight Maids-a-Milking",
-        "Nine Ladies Dancing",
-        "Ten Lords-a-Leaping",
-        "Eleven Pipers Piping",
-        "Twelve Drummers Drumming"
+        "a partridge in a pear tree.",
+        "two turtle doves,",
+        "three french hens,",
+        "four calling birds,",
+        "five gold rings,",
+        "six geese-a-laying,",
+        "seven swans-a-swimming,",
+        "eight maids-a-milking,",
+        "nine ladies dancing,",
+        "ten lords-a-leaping,",
+        "eleven pipers piping,",
+        "twelve drummers drumming,"
     ]
     
     # Print each verse of the song
     for day_num in range(12):
-        print(f"On the {days[day_num]} day of Christmas,")
-        print("my true love gave to me")
+        print(f"On the {days[day_num]} day of Christmas my true love gave to me:")
         
         # Print gifts in reverse order for this verse
         for gift_num in range(day_num, -1, -1):
@@ -42,7 +41,7 @@ def main():
                 print(f"and {gifts[gift_num]}.")
             elif gift_num == 0:
                 # First day only - just the partridge
-                print(f"{gifts[gift_num]}.")
+                print(f"{gifts[gift_num]}")
             else:
                 # All other gifts without ending punctuation
                 print(gifts[gift_num])
